@@ -19,12 +19,12 @@ body {
     width: 100%;
     max-width: 960px;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Equal halves for sidebar and content */
+    grid-template-columns: 1fr 1fr; /* Explicitly setting equal columns */
     gap: 30px;
 }
 
 aside {
-    background-color: #1e88e5; /* Blue sidebar color */
+    background-color: #1e88e5; /* Blue sidebar */
     color: #fff;
     padding: 40px;
     border-radius: 10px 0 0 10px;
@@ -40,7 +40,7 @@ aside img {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 4px solid #29b6f6; /* Lighter blue accent */
+    border: 4px solid #29b6f6;
 }
 
 aside h2 {
@@ -50,7 +50,7 @@ aside h2 {
 }
 
 aside p {
-    color: #bbdefb; /* Light blue text in sidebar */
+    color: #bbdefb;
     font-size: 0.95em;
     margin-bottom: 15px;
 }
@@ -61,7 +61,7 @@ aside .contact-info-sidebar p {
 }
 
 aside a {
-    color: #a7ffeb; /* Teal accent color */
+    color: #a7ffeb;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
@@ -83,7 +83,7 @@ h1 {
 .section {
     margin-bottom: 35px;
     padding-bottom: 25px;
-    border-bottom: 1px solid #bbdefb; /* Light blue separator */
+    border-bottom: 1px solid #bbdefb;
 }
 
 .section:last-child {
@@ -98,38 +98,15 @@ h2 {
     padding-bottom: 5px;
 }
 
-.summary-box {
-    background-color: #e1f5fe; /* Very light blue for summary */
+.group { /* Using the class name from your HTML */
+    background-color: #e1f5fe; /* Very light blue for groups */
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
     border-left: 5px solid #03a9f4; /* Cyan accent bar */
 }
 
-.experience-item,
-.education-item {
-    background-color: #f0f8ff; /* Another light blue for items */
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    border-left: 5px solid #1976d2; /* Darker blue accent bar */
-}
-
-h3 {
-    color: #333;
-    font-size: 1.4em;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.date {
-    font-style: italic;
-    color: #777;
-    margin-right: 10px;
-    font-size: 0.9em;
-}
-
-.skill-list {
+.skill-list { /* Using the class name from your HTML */
     padding-left: 0;
     list-style-type: none;
     display: flex;
@@ -143,6 +120,13 @@ h3 {
     padding: 8px 12px;
     border-radius: 20px;
     border: 1px solid #81d4fa;
+    font-size: 0.9em;
+}
+
+.date { /* Using the class name from your HTML */
+    font-style: italic;
+    color: #777;
+    margin-right: 10px;
     font-size: 0.9em;
 }
 
@@ -165,5 +149,6 @@ aside img { --animation-order: 1; }
 aside h2 { --animation-order: 2; }
 aside p { --animation-order: 3; }
 main h1 { --animation-order: 1; }
-.summary-box { --animation-order: 2; }
+.group { --animation-order: 2; }
 .section { --animation-order: 3; }
+.skill-list { --animation-order: 4; }
