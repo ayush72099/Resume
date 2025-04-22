@@ -1,156 +1,241 @@
+/* Base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
 body {
-    font-family: 'Poppins', sans-serif !important;
-    margin: 0 !important;
-    background-color: #e3f2fd !important; /* Light blue background for the page */
-    color: #333 !important;
-    line-height: 1.6 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    min-height: 100vh !important;
-    padding: 40px !important;
-    box-sizing: border-box !important;
+    background-color: #f4f4f9;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 .container {
-    background-color: #fff !important;
-    border-radius: 10px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
-    width: 100% !important;
-    max-width: 960px !important;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important; /* Force equal columns */
-    gap: 30px !important;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-aside {
-    background-color: #1e88e5 !important; /* Blue sidebar */
-    color: #fff !important;
-    padding: 40px !important;
-    border-radius: 10px 0 0 10px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    width: 100% !important; /* Ensure it respects the grid */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
-aside img {
-    width: 120px !important;
-    height: 120px !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
-    margin-bottom: 20px !important;
-    border: 4px solid #29b6f6 !important;
+header .profile h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
-aside h2 {
-    color: #fff !important;
-    font-size: 1.8em !important;
-    margin-bottom: 10px !important;
+header .profile h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #aaa;
 }
 
-aside p {
-    color: #bbdefb !important;
-    font-size: 0.95em !important;
-    margin-bottom: 15px !important;
+nav p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #ddd;
 }
 
-aside .contact-info-sidebar p {
-    margin-bottom: 8px !important;
-    text-align: left !important;
+nav a {
+    color: #00aaff;
+    text-decoration: none;
 }
 
-aside a {
-    color: #a7ffeb !important;
-    text-decoration: none !important;
-    transition: color 0.3s ease-in-out !important;
+nav a:hover {
+    text-decoration: underline;
 }
 
-aside a:hover {
-    color: #64ffda !important;
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-main {
-    padding: 40px !important;
-    width: 100% !important; /* Ensure it respects the grid */
+section .section {
+    margin-bottom: 40px;
 }
 
-h1 {
-    color: #1e88e5 !important; /* Blue heading */
-    font-size: 2.6em !important;
-    margin-bottom: 10px !important;
+section .section i {
+    margin-right: 10px;
+    color: #00aaff;
 }
 
-.section {
-    margin-bottom: 35px !important;
-    padding-bottom: 25px !important;
-    border-bottom: 1px solid #bbdefb !important;
+/* Summary */
+.summary p {
+    font-size: 1.2rem;
+    color: #555;
 }
 
-.section:last-child {
-    border-bottom: none !important;
+/* Education section */
+.education-item h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
 }
 
-h2 {
-    color: #1565c0 !important; /* Darker blue heading */
-    font-size: 1.8em !important;
-    margin-bottom: 15px !important;
-    border-bottom: 2px solid #1565c0 !important;
-    padding-bottom: 5px !important;
+.education-item .date {
+    font-size: 1.1rem;
+    color: #777;
 }
 
-.group { /* Using your class name */
-    background-color: #e1f5fe !important; /* Very light blue for groups */
-    padding: 20px !important;
-    border-radius: 8px !important;
-    margin-bottom: 20px !important;
-    border-left: 5px solid #03a9f4 !important; /* Cyan accent bar */
+.education-item p {
+    font-size: 1.2rem;
+    color: #444;
 }
 
-.skill-list { /* Using your class name */
-    padding-left: 0 !important;
-    list-style-type: none !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
+/* Skills section */
+.skill-list {
+    list-style: none;
+    margin-top: 20px;
 }
 
 .skill-list li {
-    background-color: #b3e5fc !important; /* Light blue for skills */
-    color: #1e88e5 !important; /* Blue text for skills */
-    padding: 8px 12px !important;
-    border-radius: 20px !important;
-    border: 1px solid #81d4fa !important;
-    font-size: 0.9em !important;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.date { /* Using your class name */
-    font-style: italic !important;
-    color: #777 !important;
-    margin-right: 10px !important;
-    font-size: 0.9em !important;
+.skill-list li i {
+    color: #00aaff;
+    margin-right: 10px;
 }
 
-/* Subtle Animations */
-@keyframes fadeIn {
-    from { opacity: 0 !important; transform: translateY(10px) !important; }
-    to { opacity: 1 !important; transform: translateY(0) !important; }
+/* Experience section */
+.experience-item ul {
+    list-style: none;
+    margin-left: 20px;
 }
 
-.container > *,
-aside > * {
-    opacity: 0 !important;
-    transform: translateY(8px) !important;
-    animation: fadeIn 0.5s ease-out forwards !important;
-    animation-delay: calc(0.1s * var(--animation-order)) !important;
+.experience-item ul li {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #444;
+    display: flex;
+    align-items: center;
 }
 
-/* Animation order */
-aside img { --animation-order: 1 !important; }
-aside h2 { --animation-order: 2 !important; }
-aside p { --animation-order: 3 !important; }
-main h1 { --animation-order: 1 !important; }
-.group { --animation-order: 2 !important; }
-.section { --animation-order: 3 !important; }
-.skill-list { --animation-order: 4 !important; }
+.experience-item ul li i {
+    color: #00aaff;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 1rem;
+    color: #777;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .profile h1 {
+        font-size: 2rem;
+    }
+
+    header .profile h2 {
+        font-size: 1rem;
+    }
+
+    nav p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Hover Effects */
+section .section:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+header:hover {
+    background-color: #1f2229;
+    transition: background-color 0.3s ease;
+}
+
+/* Add some shadow effect on the resume for a floating effect */
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Add interactive button styles */
+button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0088cc;
+}
+
+/* Add smooth transitions for the elements */
+h1, h2, p, li {
+    transition: color 0.3s ease;
+}
+
+/* For dark mode or custom themes in JS */
+body.dark-mode {
+    background-color: #1f1f1f;
+    color: #ccc;
+}
+
+body.dark-mode header {
+    background-color: #333;
+}
+
+body.dark-mode nav a {
+    color: #66ccff;
+}
+
+body.dark-mode .section {
+    background-color: #2c2f36;
+}
+
+body.dark-mode .skill-list li, body.dark-mode .experience-item ul li {
+    color: #bbb;
+}
+
+body.dark-mode button {
+    background-color: #66ccff;
+}
+
+body.dark-mode button:hover {
+    background-color: #44aacc;
+}
